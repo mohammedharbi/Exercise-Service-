@@ -41,6 +41,7 @@ public class ArticleService {
             if (articles.get(i).getID().equals(id)){
                 if (articles.get(i).isPublished() == false){
                 articles.get(i).setPublished(true);
+                    articles.get(i).setPublishDate(LocalDate.now());
                 return true;}
             }
         }
