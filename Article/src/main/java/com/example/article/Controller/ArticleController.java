@@ -59,7 +59,7 @@ public class ArticleController {
         boolean isPublished = articleService.publishNewsArticale(id);
         if (isPublished){
             return ResponseEntity.status(200).body(new ApiResponse("articale published"));
-        }else return ResponseEntity.status(400).body(new ApiResponse("article is already published"));
+        }else return ResponseEntity.status(400).body(new ApiResponse("id doesn't exist or article is already published"));
     }
 
     @GetMapping("/get-all-Published-NewsArticles")
